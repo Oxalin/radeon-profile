@@ -2904,7 +2904,7 @@
               <item>
                <widget class="QLabel" name="label_13">
                 <property name="text">
-                 <string>Log file: (leave empty if don't want it)</string>
+                 <string>Log file: (leave empty if you don't want it)</string>
                 </property>
                </widget>
               </item>
