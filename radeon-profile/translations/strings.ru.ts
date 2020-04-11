@@ -160,7 +160,7 @@
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="206"/>
-        <source>Gird thickness</source>
+        <source>Grid thickness</source>
         <translation>Стиль линий</translation>
     </message>
     <message>
