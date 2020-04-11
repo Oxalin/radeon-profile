@@ -960,12 +960,12 @@
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1076"/>
-        <source>1m</source>
+        <source>1 min</source>
         <translation>1м</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1083"/>
-        <source>30m</source>
+        <source>30 min</source>
         <translation>30м</translation>
     </message>
     <message>
