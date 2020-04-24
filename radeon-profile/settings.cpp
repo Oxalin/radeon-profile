@@ -26,7 +26,8 @@ void radeon_profile::saveConfig() {
         settings.setValue("saveWindowGeometry",ui->cb_saveWindowGeometry->isChecked());
         settings.setValue("windowGeometry",this->geometry());
         settings.setValue("powerLevelStatistics", ui->cb_stats->isChecked());
-        settings.setValue("aleternateRowColors",ui->cb_alternateRow->isChecked());
+        settings.setValue("alternateRowColors",ui->cb_alternateRow->isChecked());
+        settings.setValue("language", ui->combo_languageMenu->currentData());
 
         settings.setValue("graphOffset", ui->cb_plotsRightGap->isChecked());
         settings.setValue("graphRange",ui->slider_timeRange->value());
@@ -253,7 +254,8 @@ void radeon_profile::loadConfig() {
     ui->cb_graphs->setChecked(settings.value("updateGraphs",true).toBool());
     ui->cb_saveWindowGeometry->setChecked(settings.value("saveWindowGeometry").toBool());
     ui->cb_stats->setChecked(settings.value("powerLevelStatistics",true).toBool());
-    ui->cb_alternateRow->setChecked(settings.value("aleternateRowColors",true).toBool());
+    ui->cb_alternateRow->setChecked(settings.value("alternateRowColors",true).toBool());
+    ui->combo_languageMenu->setCurrentIndex(settings.value("language", "").toInt());
     ui->cb_daemonAutoRefresh->setChecked(settings.value("daemonAutoRefresh",true).toBool());
     ui->combo_execDbcAction->setCurrentIndex(settings.value("execDbcAction",0).toInt());
     ui->slider_fanSpeed->setValue(settings.value("fanSpeedSlider",20).toInt());
