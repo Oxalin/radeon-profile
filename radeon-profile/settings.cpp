@@ -376,6 +376,74 @@ void radeon_profile::loadConfig() {
 
 }
 
+static bool hasQmFilesForLocale(const QString &locale, const QString &trPath)
+{
+    const QString trFile = QLatin1String("/strings.") + locale + QLatin1String(".qm");
+    return QFile::exists(trPath + trFile);
+}
+
+void radeon_profile::fillLanguageMenu() const
+{
+    const QString currentLocale = getLanguage();
+
+    ui->combo_languageMenu->addItem(tr("<System Language>"), QString());
+
+    // need to add this explicitly, since there is no qm file for English
+    ui->combo_languageMenu->addItem(QLatin1String("English"), QLatin1String("C"));
+
+    if (currentLocale == QLatin1String("C"))
+        ui->combo_languageMenu->setCurrentIndex(ui->combo_languageMenu->count() - 1);
+
+    const QStringList languageFiles = QDir(translationPath).entryList(QStringList(QLatin1String("strings*.qm")));
+
+    for (const QString &languageFile : languageFiles) {
+        int start = languageFile.indexOf('.') + 1;
+        int end = languageFile.lastIndexOf('.');
+        const QString locale = languageFile.mid(start, end-start);
+
+        // no need to show a language that will not load anyway
+        if (hasQmFilesForLocale(locale, translationPath)) {
+            QLocale tmpLocale(locale);
+            QString languageItem = QLocale::languageToString(tmpLocale.language()) + QLatin1String(" (")
+                                   + QLocale::countryToString(tmpLocale.country()) + QLatin1Char(')');
+            ui->combo_languageMenu->addItem(languageItem, locale);
+
+            if (locale == currentLocale)
+                ui->combo_languageMenu->setCurrentIndex(ui->combo_languageMenu->count() - 1);
+        }
+    }
+}
+
+void radeon_profile::resetLanguage()
+{
+    // system language is default
+    ui->combo_languageMenu->setCurrentIndex(0);
+}
+
+QString radeon_profile::getLanguage() const
+{
+    QSettings settings(getLoadedConfigFilePath(), QSettings::IniFormat);
+    return settings.value(QLatin1String("language")).toString();
+}
+
+void radeon_profile::setLanguage(const QString &locale)
+{
+    QSettings settings(settingsFilePath, QSettings::IniFormat);
+/*
+    if (settings->value(QLatin1String("language")).toString() != locale) {
+        RestartDialog dialog(ICore::dialogParent(),
+                             tr("The language change will take effect after restart."));
+        dialog.exec();
+    }
+ */
+    if (locale.isEmpty())
+        settings.remove(QLatin1String("language"));
+    else
+        settings.setValue(QLatin1String("language"), locale);
+}
+
+
+
 void radeon_profile::loadRpevent(const QXmlStreamReader &xml) {
     RPEvent rpe;
     rpe.name = xml.attributes().value("name").toString();

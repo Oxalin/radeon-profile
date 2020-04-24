@@ -211,6 +211,10 @@ private:
     void setupTrayIcon();
     void refreshTooltip();
     QMenu* createDpmMenu();
+    void fillLanguageMenu() const;
+    void resetLanguage();
+    QString getLanguage() const;
+    void setLanguage(const QString &locale);
     void changeEvent(QEvent *event);
     void saveConfig();
     void loadConfig();
