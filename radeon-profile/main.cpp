@@ -2,22 +2,44 @@
 #include <QApplication>
 #include <QTranslator>
 
+
 int main(int argc, char *argv[])
 {
     qDebug() << "Creating application object";
 
     QApplication app(argc, argv);
+    QSettings *settings = getUserSettings();
+
     QTranslator translator;
     QLocale locale;
 
-    if (locale.language() != QLocale::Language::English) {
-        if (translator.load(locale, "strings", ".")
-                || translator.load(locale, "strings", ".", QApplication::applicationDirPath())
-                || translator.load(locale, "strings", ".", "/usr/share/radeon-profile"))
+    QStringList uiLanguages = QLocale::system().uiLanguages();
+    QString overrideLanguage = settings->value(QLatin1String("language")).toString();
 
-            a.installTranslator(&translator);
-        else
+    if (!overrideLanguage.isEmpty()) {
+        uiLanguages.prepend(overrideLanguage);
+    }
+
+    for (QString language : qAsConst(uiLanguages)) {
+        locale = QLocale(language);
+
+        if (translator.load(locale, "strings", ".")
+            || translator.load(locale, "strings", ".", QApplication::applicationDirPath())
+            || translator.load(locale, "strings", ".", translationPath)) {
+            app.installTranslator(&translator);
+            break;
+        }
+        else if (language == QLatin1String("C") /* language == "English" */) {
+            // use built-in
+            break;
+        }
+        else if (language.startsWith(QLatin1String("en")) /* "English" is built-in */) {
+            // use built-in
+            break;
+        }
+        else {
             qWarning() << "Translation not found.";
+        }
     }
 
     qDebug() << "Creating radeon_profile";

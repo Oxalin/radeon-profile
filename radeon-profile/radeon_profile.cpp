@@ -43,6 +43,11 @@ QString getLoadedConfigFilePath() {
     return isSettingsLoadedFromLegacy() ? legacySettingsFilePath : settingsFilePath;
 }
 
+QSettings *getUserSettings()
+{
+    return new QSettings(getLoadedConfigFilePath(), QSettings::IniFormat);
+}
+
 DaemonComm radeon_profile::dcomm;
 
 radeon_profile::radeon_profile(QWidget *parent) :
