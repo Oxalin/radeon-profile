@@ -194,6 +194,7 @@ void radeon_profile::setupUiElements()
     ui->list_currentGPUData->setHeaderHidden(false);
     ui->execPages->setCurrentIndex(0);
     ui->btn_general->setMenu(createGeneralMenu());
+    fillLanguageMenu();
     enableUiControls(false);
 
     setupTrayIcon();
