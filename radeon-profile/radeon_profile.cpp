@@ -28,6 +28,21 @@
 #include <QMessageBox>
 #include <QDebug>
 
+
+QString getConfigDirPath() {
+    return QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + "/radeon-profile";
+}
+
+// Try to load from settingsFilePath first, fallback to old file path if not found.
+bool isSettingsLoadedFromLegacy() {
+    loadedFromLegacyPath = !QFileInfo::exists(settingsFilePath);
+    return loadedFromLegacyPath;
+}
+
+QString getLoadedConfigFilePath() {
+    return isSettingsLoadedFromLegacy() ? legacySettingsFilePath : settingsFilePath;
+}
+
 DaemonComm radeon_profile::dcomm;
 
 radeon_profile::radeon_profile(QWidget *parent) :

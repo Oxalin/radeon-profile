@@ -6,7 +6,7 @@ int main(int argc, char *argv[])
 {
     qDebug() << "Creating application object";
 
-    QApplication a(argc, argv);
+    QApplication app(argc, argv);
     QTranslator translator;
     QLocale locale;
 
@@ -23,5 +23,5 @@ int main(int argc, char *argv[])
     qDebug() << "Creating radeon_profile";
     radeon_profile w;
 
-    return a.exec();
+    return app.exec();
 }

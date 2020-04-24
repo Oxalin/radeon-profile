@@ -30,6 +30,23 @@
 
 #define appVersion 20190903
 
+
+static const QString legacySettingsFilePath = QDir::homePath() + "/.radeon-profile-settings";
+static const QString legacyAuxStuffFilePath = QDir::homePath() + "/.radeon-profile-auxstuff";
+
+static const QString settingsFilePath = getConfigDirPath() + "/radeon-profile-settings";
+static const QString auxStuffFilePath = getConfigDirPath() + "/radeon-profile-auxstuff";
+
+static const QString translationPath = "/usr/share/radeon-profile/";
+
+static bool loadedFromLegacyPath = false;
+
+
+QString getConfigDirPath();
+bool isSettingsLoadedFromLegacy();
+QString getLoadedConfigFilePath();
+
+
 namespace Ui {
 class radeon_profile;
 }

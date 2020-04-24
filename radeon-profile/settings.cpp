@@ -11,23 +11,12 @@
 #include <QDesktopWidget>
 #include <QRect>
 
-QString getConfigPath() {
-    return QStandardPaths::writableLocation(QStandardPaths::ConfigLocation) + "/radeon-profile";
-}
-
-static const QString legacySettingsPath = QDir::homePath() + "/.radeon-profile-settings";
-static const QString legacyAuxStuffPath = QDir::homePath() + "/.radeon-profile-auxstuff";
-
-static const QString settingsPath = getConfigPath() + "/radeon-profile-settings";
-static const QString auxStuffPath = getConfigPath() + "/radeon-profile-auxstuff";
-
-static bool loadedFromLegacy = false;
 
 void radeon_profile::saveConfig() {
     {
-        // If settingsPath doesn't exist yet, running QSetting's destructor will create it.
+        // If settingsFilePath doesn't exist yet, running QSetting's destructor will create it.
         // It's important that happens before saving auxstuff later-on.
-        QSettings settings(settingsPath,QSettings::IniFormat);
+        QSettings settings(settingsFilePath,QSettings::IniFormat);
 
         settings.setValue("startMinimized",ui->cb_startMinimized->isChecked());
         settings.setValue("minimizeToTray",ui->cb_minimizeTray->isChecked());
@@ -85,16 +74,16 @@ void radeon_profile::saveConfig() {
     xml.writeEndElement();
     xml.writeEndDocument();
 
-    QFile f(auxStuffPath);
+    QFile f(auxStuffFilePath);
     if (f.open(QIODevice::WriteOnly))  {
         f.write(xmlString.toLatin1());
         f.close();
     }
 
-    if (loadedFromLegacy) {
-        QFile::remove(legacySettingsPath);
-        QFile::remove(legacyAuxStuffPath);
-        loadedFromLegacy = false;
+    if (loadedFromLegacyPath) {
+        QFile::remove(legacySettingsFilePath);
+        QFile::remove(legacyAuxStuffFilePath);
+        loadedFromLegacyPath = false;
     }
 }
 
@@ -255,10 +244,7 @@ void radeon_profile::saveTopbarItemsSchemas(QXmlStreamWriter &xml) {
 void radeon_profile::loadConfig() {
     qDebug() << "Loading configuration";
 
-    // Try to load from config first, fallback to old file path if not found.
-    loadedFromLegacy = !QFileInfo::exists(settingsPath);
-    const auto configPath = loadedFromLegacy ? legacySettingsPath : settingsPath;
-    QSettings settings(configPath,QSettings::IniFormat);
+    QSettings settings(getLoadedConfigFilePath(), QSettings::IniFormat);
 
     ui->cb_startMinimized->setChecked(settings.value("startMinimized",false).toBool());
     ui->cb_minimizeTray->setChecked(settings.value("minimizeToTray",false).toBool());
@@ -336,7 +322,7 @@ void radeon_profile::loadConfig() {
     plotManager.setRightGap(ui->cb_plotsRightGap->isChecked());
     hideEventControls(true);
 
-    const auto auxFilePath = loadedFromLegacy ? legacyAuxStuffPath : auxStuffPath;
+    const auto auxFilePath = loadedFromLegacyPath ? legacyAuxStuffFilePath : auxStuffFilePath;
     QFile f(auxFilePath);
     if (f.open(QIODevice::ReadOnly)) {
         QXmlStreamReader xml(&f);
