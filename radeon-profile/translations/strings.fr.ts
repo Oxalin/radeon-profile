@@ -6,114 +6,116 @@
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="20"/>
         <source>Event definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Définition de l&apos;évènement</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="29"/>
         <source>Modify:</source>
-        <translation type="unfinished"></translation>
+        <translation>Modification des profils :</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="51"/>
         <location filename="../dialogs/dialog_rpevent.ui" line="60"/>
         <location filename="../dialogs/dialog_rpevent.ui" line="69"/>
         <source>No change</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>«Aucun changement» serait aussi applicable.</translatorcomment>
+        <translation>Aucune modification</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="77"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="87"/>
         <source>Set fan:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ventilation :</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="94"/>
         <source>Set power level:</source>
-        <translation type="unfinished"></translation>
+        <translation>Niveau de puissance :</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="101"/>
         <source>Set DPM to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Alimentation dynamique :</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="116"/>
         <source>Event name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de l&apos;évènement</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="126"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="137"/>
         <source>Temperature</source>
-        <translation type="unfinished"></translation>
+        <translation>Température</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="142"/>
         <source>Binary</source>
-        <translation type="unfinished"></translation>
+        <translation>Exécutable</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="150"/>
         <source>Event trigger</source>
-        <translation type="unfinished"></translation>
+        <translation>Déclencheur</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="178"/>
         <source>Activate above this temperature:</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer au-dessus de cette température :</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="202"/>
         <source>Binary (executing this binary will trigger event):</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>Il n&apos;est pas de bonne pratique d&apos;ajouter un commentaire comme cela est fait dans le texte anglophone.</translatorcomment>
+        <translation>Chemin vers l&apos;exécutable :</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="218"/>
         <source>...</source>
-        <translation type="unfinished">...</translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="235"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.ui" line="248"/>
         <source>Cancel</source>
-        <translation type="unfinished">Annuler</translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.cpp" line="32"/>
         <source>Set Profile to:</source>
-        <translation type="unfinished"></translation>
+        <translation>Définir le profil à :</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.cpp" line="38"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.cpp" line="39"/>
         <source>Fixed speed</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitesse constante</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.cpp" line="75"/>
         <source>Selected trigger type is Binary, so the binary field cannot be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le type de déclencheur sélectionné est Exécutable, le chemin vers l&apos;application ne peut être vide.</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_rpevent.cpp" line="129"/>
         <source>Select binary</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélectionner l&apos;exécutable</translation>
     </message>
 </context>
 <context>
@@ -121,113 +123,109 @@
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="26"/>
         <source>Plot definition</source>
-        <translation type="unfinished"></translation>
+        <translation>Définition du tracé</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="72"/>
+        <location filename="../dialogs/dialog_defineplot.ui" line="206"/>
         <source>Grid thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Épaisseur de grille</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="107"/>
         <location filename="../dialogs/dialog_defineplot.ui" line="238"/>
         <source>Set grid color</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleur</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="114"/>
         <location filename="../dialogs/dialog_defineplot.ui" line="248"/>
         <source>Ticks</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalle de graduation</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="143"/>
         <location filename="../dialogs/dialog_defineplot.ui" line="299"/>
         <source>Data</source>
-        <translation type="unfinished"></translation>
+        <translation>Donnée</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="148"/>
         <location filename="../dialogs/dialog_defineplot.ui" line="304"/>
         <source>Color</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleur</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="156"/>
         <location filename="../dialogs/dialog_defineplot.ui" line="312"/>
         <source>Grid style</source>
-        <translation type="unfinished"></translation>
-    </message>
-    <message>
-        <location filename="../dialogs/dialog_defineplot.ui" line="206"/>
-        <source>Gird thickness</source>
-        <translation type="unfinished"></translation>
+        <translation>Style de la grille</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="338"/>
         <source>Enable left scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer l&apos;échelle de gauche</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="351"/>
         <source>Enable right scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Activer l&apos;échelle de droite</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="364"/>
         <source>Set background color</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleur de l&apos;arrière plan</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="377"/>
         <source>Plot name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom du tracé :</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="422"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.ui" line="435"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.cpp" line="79"/>
         <source>Solid line</source>
-        <translation type="unfinished"></translation>
+        <translation>Ligne continue</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.cpp" line="80"/>
         <source>Dash line</source>
-        <translation type="unfinished"></translation>
+        <translation>Tirets</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.cpp" line="81"/>
         <source>Dot Line</source>
-        <translation type="unfinished"></translation>
+        <translation>Pointillés</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.cpp" line="162"/>
         <source>Values with different units cannot be selected for the same scale</source>
-        <translation type="unfinished"></translation>
+        <translation>Des valeurs avec des unités différentes ne peuvent être sélectionnées pour une même échelle</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.cpp" line="184"/>
         <location filename="../dialogs/dialog_defineplot.cpp" line="190"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.cpp" line="184"/>
         <source>Name cannot be empty.</source>
-        <translation type="unfinished"></translation>
+        <translation>Le nom ne peut être vide.</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_defineplot.cpp" line="190"/>
         <source>Cannot create empty plot.</source>
-        <translation type="unfinished"></translation>
+        <translation>Impossible de créer un tracé vide.</translation>
     </message>
 </context>
 <context>
@@ -235,53 +233,53 @@
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="26"/>
         <source>Topbar item</source>
-        <translation type="unfinished"></translation>
+        <translation>Élément de la barre supérieure</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="47"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="54"/>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="61"/>
         <source>Set color</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleur</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="81"/>
         <source>Type</source>
-        <translation type="unfinished"></translation>
+        <translation>Type</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="109"/>
         <source>Label pair</source>
-        <translation type="unfinished"></translation>
+        <translation>Paire d&apos;étiquettes</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="126"/>
         <source>Large label</source>
-        <translation type="unfinished"></translation>
+        <translation>Grande étiquette</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="140"/>
         <source>Pie</source>
-        <translation type="unfinished"></translation>
+        <translation>Diagramme en secteurs</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="155"/>
         <source>Secondary data</source>
-        <translation type="unfinished"></translation>
+        <translation>Donnée secondaire</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="167"/>
         <source>Primary data</source>
-        <translation type="unfinished"></translation>
+        <translation>Donnée primaire</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_deinetopbaritem.ui" line="174"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer</translation>
     </message>
 </context>
 <context>
@@ -289,17 +287,17 @@
     <message>
         <location filename="../dialogs/dialog_sliders.ui" line="14"/>
         <source>Dialog</source>
-        <translation type="unfinished"></translation>
+        <translation>Dialogue</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_sliders.ui" line="44"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_sliders.ui" line="57"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
 </context>
 <context>
@@ -307,52 +305,52 @@
     <message>
         <location filename="../dialogs/dialog_topbarcfg.ui" line="20"/>
         <source>Topbar configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration de la barre supérieure</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.ui" line="47"/>
         <source>&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&gt;</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.ui" line="90"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.ui" line="97"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.ui" line="110"/>
         <source>&lt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.ui" line="117"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.ui" line="124"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.ui" line="131"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.cpp" line="103"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Question</translation>
     </message>
     <message>
         <location filename="../dialogs/dialog_topbarcfg.cpp" line="103"/>
         <source>Remove selected item?</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer l&apos;élément sélectionné?</translation>
     </message>
 </context>
 <context>
@@ -360,32 +358,33 @@
     <message>
         <location filename="../execbin.cpp" line="42"/>
         <source>Save output to file</source>
-        <translation type="unfinished"></translation>
+        <translatorcomment>«Enregistrer la sortie dans un fichier» peut aussi s&apos;appliquer.</translatorcomment>
+        <translation>Enregistrer dans un fichier de sortie</translation>
     </message>
     <message>
         <location filename="../execbin.cpp" line="46"/>
         <source>Command</source>
-        <translation type="unfinished"></translation>
+        <translation>Commande</translation>
     </message>
     <message>
         <location filename="../execbin.cpp" line="48"/>
         <source>Output</source>
-        <translation type="unfinished"></translation>
+        <translation>Sortie</translation>
     </message>
     <message>
         <location filename="../execbin.cpp" line="78"/>
         <source>Process state: running</source>
-        <translation type="unfinished"></translation>
+        <translation>État du processus : actif</translation>
     </message>
     <message>
         <location filename="../execbin.cpp" line="90"/>
         <source>Process state: not running</source>
-        <translation type="unfinished"></translation>
+        <translation>État du processus : inactif</translation>
     </message>
     <message>
         <location filename="../execbin.cpp" line="94"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer</translation>
     </message>
 </context>
 <context>
@@ -393,7 +392,7 @@
     <message>
         <location filename="../components/pieprogressbar.ui" line="32"/>
         <source>PieProgressBar</source>
-        <translation type="unfinished"></translation>
+        <translation>Barre de progression du diagramme en secteurs</translation>
     </message>
 </context>
 <context>
@@ -441,7 +440,7 @@
     <message>
         <location filename="../globalStuff.h" line="476"/>
         <source>Temperature</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Température</translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="477"/>
@@ -461,7 +460,7 @@
     <message>
         <location filename="../globalStuff.h" line="480"/>
         <source>Power level</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Niveau de puissance</translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="481"/>
@@ -517,17 +516,17 @@
         <location filename="../globalStuff.h" line="499"/>
         <location filename="../globalStuff.h" line="518"/>
         <source>Temperature [</source>
-        <translation type="unfinished"></translation>
+        <translation>Température [</translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="500"/>
         <source>Temperature (max) [</source>
-        <translation type="unfinished"></translation>
+        <translation>Température (max) [</translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="501"/>
         <source>Temperature (min) [</source>
-        <translation type="unfinished"></translation>
+        <translation>Température (min) [</translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="502"/>
@@ -537,7 +536,7 @@
     <message>
         <location filename="../globalStuff.h" line="503"/>
         <source>Power level </source>
-        <translation type="unfinished"></translation>
+        <translation>Niveau de puissance </translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="504"/>
@@ -562,36 +561,36 @@
     <message>
         <location filename="../globalStuff.h" line="516"/>
         <source>Percent [%]</source>
-        <translation type="unfinished"></translation>
+        <translation>Pourcent [%]</translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="517"/>
         <source>Milivolt [mV]</source>
-        <translation type="unfinished"></translation>
+        <translation>Millivolt [mV]</translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="519"/>
         <source>Speed [RPM]</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitesse [RPM]</translation>
     </message>
     <message>
         <location filename="../globalStuff.h" line="520"/>
         <source>Watt [W]</source>
-        <translation type="unfinished"></translation>
+        <translation>Watt [W]</translation>
     </message>
     <message numerus="yes">
         <location filename="../gpu.cpp" line="655"/>
         <source>Virtual screen n°%n</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>Écran virtuel n°%n</numerusform>
+            <numerusform>Écrans virtuels n°%n</numerusform>
         </translation>
     </message>
     <message>
         <location filename="../gpu.cpp" line="661"/>
         <location filename="../gpu.cpp" line="730"/>
         <source>Resolution</source>
-        <translation type="unfinished"></translation>
+        <translation>Résolution</translation>
     </message>
     <message>
         <location filename="../gpu.cpp" line="669"/>
@@ -612,17 +611,17 @@
         <location filename="../gpu.cpp" line="675"/>
         <location filename="../gpu.cpp" line="769"/>
         <source>%n mm x </source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n mm x </numerusform>
+            <numerusform>%n mm x </numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../gpu.cpp" line="675"/>
         <source>%n mm</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n mm</numerusform>
+            <numerusform>%n mm</numerusform>
         </translation>
     </message>
     <message>
@@ -633,28 +632,28 @@
     <message>
         <location filename="../gpu.cpp" line="706"/>
         <source>Disconnected</source>
-        <translation type="unfinished"></translation>
+        <translation>Déconnecté</translation>
     </message>
     <message>
         <location filename="../gpu.cpp" line="719"/>
         <location filename="../gpu.cpp" line="721"/>
         <source>Active</source>
-        <translation type="unfinished"></translation>
+        <translation>Actif</translation>
     </message>
     <message>
         <location filename="../gpu.cpp" line="719"/>
         <source>No</source>
-        <translation type="unfinished"></translation>
+        <translation>Non</translation>
     </message>
     <message>
         <location filename="../gpu.cpp" line="721"/>
         <source>Yes</source>
-        <translation type="unfinished"></translation>
+        <translation>Oui</translation>
     </message>
     <message>
         <location filename="../gpu.cpp" line="736"/>
         <source>Refresh rate</source>
-        <translation type="unfinished"></translation>
+        <translation>Taux de rafraîchissement</translation>
     </message>
     <message>
         <location filename="../gpu.cpp" line="742"/>
@@ -669,22 +668,22 @@
     <message>
         <location filename="../gpu.cpp" line="769"/>
         <source>Size</source>
-        <translation type="unfinished"></translation>
+        <translation>Taille</translation>
     </message>
     <message numerus="yes">
         <location filename="../gpu.cpp" line="769"/>
         <source>%n mm </source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n mm </numerusform>
+            <numerusform>%n mm </numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../gpu.cpp" line="769"/>
         <source>(%n inches)</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>(%n pouce)</numerusform>
+            <numerusform>(%n pouces)</numerusform>
         </translation>
     </message>
     <message>
@@ -710,7 +709,7 @@
     <message>
         <location filename="../gpu.cpp" line="819"/>
         <source>Properties</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriétés</translation>
     </message>
     <message>
         <location filename="../gpu.cpp" line="876"/>
@@ -725,22 +724,22 @@
     <message>
         <location filename="../gpu.cpp" line="885"/>
         <source>Serial number</source>
-        <translation type="unfinished"></translation>
+        <translation>Numéro de série</translation>
     </message>
     <message numerus="yes">
         <location filename="../gpu.cpp" line="944"/>
         <source>%n connected, </source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n connecté, </numerusform>
+            <numerusform>%n connectés, </numerusform>
         </translation>
     </message>
     <message numerus="yes">
         <location filename="../gpu.cpp" line="944"/>
         <source>%n active</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>%n actif</numerusform>
+            <numerusform>%n actifs</numerusform>
         </translation>
     </message>
 </context>
@@ -749,12 +748,12 @@
     <message>
         <location filename="../components/slider.ui" line="20"/>
         <source>Form</source>
-        <translation type="unfinished"></translation>
+        <translation>Formulaire</translation>
     </message>
     <message>
         <location filename="../components/slider.ui" line="44"/>
         <source>TextLabel</source>
-        <translation type="unfinished"></translation>
+        <translation>Étiquette de texte</translation>
     </message>
 </context>
 <context>
@@ -763,38 +762,38 @@
         <location filename="../radeon_profile.ui" line="20"/>
         <location filename="../radeon_profile.ui" line="4167"/>
         <source>Radeon Profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Radeon Profile</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="140"/>
         <location filename="../uiElements.cpp" line="83"/>
         <source>Battery</source>
-        <translation type="unfinished"></translation>
+        <translation>Sur batterie</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="169"/>
         <location filename="../uiElements.cpp" line="85"/>
         <source>Balanced</source>
-        <translation type="unfinished"></translation>
+        <translation>Balancé</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="198"/>
         <location filename="../uiElements.cpp" line="87"/>
         <source>Performance</source>
-        <translation type="unfinished"></translation>
+        <translation>Performance</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="245"/>
         <location filename="../radeon_profile.ui" line="675"/>
         <source>Power level</source>
-        <translation type="unfinished"></translation>
+        <translation>Niveau de puissance</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="271"/>
         <location filename="../radeon_profile.ui" line="1415"/>
         <location filename="../radeon_profile.ui" line="2038"/>
         <source>default</source>
-        <translation type="unfinished"></translation>
+        <translation>défaut</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="300"/>
@@ -802,78 +801,78 @@
         <location filename="../uiElements.cpp" line="96"/>
         <location filename="../uiElements.cpp" line="179"/>
         <source>Auto</source>
-        <translation type="unfinished"></translation>
+        <translation>Auto</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="336"/>
         <source>Change profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier le profil</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="372"/>
         <source>GPU</source>
-        <translation type="unfinished"></translation>
+        <translation>GPU</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="394"/>
         <source>Selected GPU</source>
-        <translation type="unfinished"></translation>
+        <translation>GPU sélectionné</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="423"/>
         <source>GPU Summary</source>
-        <translation type="unfinished"></translation>
+        <translation>Sommaire</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="472"/>
         <source>Property</source>
-        <translation type="unfinished"></translation>
+        <translation>Propriété</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="477"/>
         <location filename="../radeon_profile.ui" line="621"/>
         <source>Value</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeur</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="489"/>
         <source>GLX info</source>
-        <translation type="unfinished"></translation>
+        <translation>GLX info</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="526"/>
         <source>Connectors</source>
-        <translation type="unfinished"></translation>
+        <translation>Connecteurs</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="563"/>
         <source>Connector</source>
-        <translation type="unfinished"></translation>
+        <translation>Connecteur</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="568"/>
         <source>Status</source>
-        <translation type="unfinished"></translation>
+        <translation>État</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="577"/>
         <source>Module info</source>
-        <translation type="unfinished"></translation>
+        <translation>Détails du module</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="616"/>
         <source>Option</source>
-        <translation type="unfinished"></translation>
+        <translation>Option</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="626"/>
         <source>Description</source>
-        <translation type="unfinished"></translation>
+        <translation>Description</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="635"/>
         <source>Stats</source>
-        <translation type="unfinished"></translation>
+        <translation>Statistiques</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="680"/>
@@ -892,14 +891,14 @@
         <location filename="../radeon_profile.ui" line="2791"/>
         <location filename="../tab_exec.cpp" line="208"/>
         <source>Remove</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="834"/>
         <location filename="../radeon_profile.ui" line="2220"/>
         <location filename="../radeon_profile.ui" line="2784"/>
         <source>Modify</source>
-        <translation type="unfinished"></translation>
+        <translation>Modifier</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="841"/>
@@ -913,14 +912,14 @@
         <location filename="../radeon_profile.ui" line="1929"/>
         <location filename="../radeon_profile.ui" line="2018"/>
         <source>Apply</source>
-        <translation type="unfinished"></translation>
+        <translation>Appliquer</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="873"/>
         <location filename="../radeon_profile.ui" line="2213"/>
         <location filename="../radeon_profile.ui" line="2777"/>
         <source>Add</source>
-        <translation type="unfinished"></translation>
+        <translation>Ajouter</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="901"/>
@@ -930,7 +929,7 @@
     <message>
         <location filename="../radeon_profile.ui" line="925"/>
         <source>Set color</source>
-        <translation type="unfinished"></translation>
+        <translation>Couleur</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="983"/>
@@ -940,7 +939,7 @@
     <message>
         <location filename="../radeon_profile.ui" line="990"/>
         <source>Show legend on plots</source>
-        <translation type="unfinished"></translation>
+        <translation>Afficher la légende des tracés</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="997"/>
@@ -950,17 +949,17 @@
     <message>
         <location filename="../radeon_profile.ui" line="1034"/>
         <source>Configure</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurer</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1076"/>
-        <source>1m</source>
-        <translation type="unfinished"></translation>
+        <source>1 min</source>
+        <translation>1 min</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1083"/>
-        <source>30m</source>
-        <translation type="unfinished"></translation>
+        <source>30 min</source>
+        <translation>30 min</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1097"/>
@@ -978,7 +977,7 @@
         <location filename="../radeon_profile.ui" line="3585"/>
         <location filename="../radeon_profile.ui" line="4112"/>
         <source>General</source>
-        <translation type="unfinished"></translation>
+        <translation>Général</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1168"/>
@@ -997,14 +996,14 @@
         <location filename="../radeon_profile.ui" line="1287"/>
         <location filename="../radeon_profile.ui" line="1885"/>
         <source>%</source>
-        <translation type="unfinished"></translation>
+        <translation>%</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1246"/>
         <location filename="../radeon_profile.ui" line="1343"/>
         <location filename="../radeon_profile.ui" line="1557"/>
         <source>Memory</source>
-        <translation type="unfinished"></translation>
+        <translation>Mémoire</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1303"/>
@@ -1020,30 +1019,30 @@
         <location filename="../radeon_profile.ui" line="1425"/>
         <location filename="../radeon_profile.ui" line="1958"/>
         <source>Current profile:</source>
-        <translation type="unfinished"></translation>
+        <translation>Profil actif :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1435"/>
         <location filename="../radeon_profile.ui" line="2065"/>
         <source>Save</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1442"/>
         <location filename="../radeon_profile.ui" line="2011"/>
         <source>Save as</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer sous</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1449"/>
         <location filename="../radeon_profile.ui" line="1982"/>
         <source>Remove profile</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1456"/>
         <source>Reset overclock</source>
-        <translation type="unfinished"></translation>
+        <translation>Réinitialiser</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1470"/>
@@ -1056,7 +1055,7 @@
         <location filename="../radeon_profile.ui" line="1583"/>
         <location filename="../uiElements.cpp" line="315"/>
         <source>State</source>
-        <translation type="unfinished"></translation>
+        <translation>État</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1531"/>
@@ -1084,17 +1083,17 @@
     <message>
         <location filename="../radeon_profile.ui" line="1684"/>
         <source>W</source>
-        <translation type="unfinished"></translation>
+        <translation> W</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1705"/>
         <source>Fan Control</source>
-        <translation type="unfinished"></translation>
+        <translation>Ventilation</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1765"/>
         <source>Fixed</source>
-        <translation type="unfinished"></translation>
+        <translation>Vitesse constante</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1787"/>
@@ -1105,7 +1104,7 @@
         <location filename="../radeon_profile.ui" line="1810"/>
         <location filename="../radeon_profile.ui" line="2247"/>
         <source>Info</source>
-        <translation type="unfinished"></translation>
+        <translation>Info</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="1998"/>
@@ -1117,7 +1116,7 @@
         <location filename="../tab_fanControl.cpp" line="208"/>
         <location filename="../tab_fanControl.cpp" line="258"/>
         <source>Temperature</source>
-        <translation type="unfinished"></translation>
+        <translation>Température</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2057"/>
@@ -1138,7 +1137,7 @@
     <message>
         <location filename="../radeon_profile.ui" line="2107"/>
         <source>Events</source>
-        <translation type="unfinished"></translation>
+        <translation>Événements</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2130"/>
@@ -1158,12 +1157,12 @@
     <message>
         <location filename="../radeon_profile.ui" line="2198"/>
         <source>Enabled</source>
-        <translation type="unfinished"></translation>
+        <translation>Actif</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2203"/>
         <source>Event name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom de l&apos;événement</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2257"/>
@@ -1178,17 +1177,17 @@
     <message>
         <location filename="../radeon_profile.ui" line="2742"/>
         <source>Name</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2747"/>
         <source>Binary</source>
-        <translation type="unfinished"></translation>
+        <translation>Exécutable</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2752"/>
         <source>Params</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2757"/>
@@ -1220,27 +1219,27 @@
     <message>
         <location filename="../radeon_profile.ui" line="2848"/>
         <source>Name:</source>
-        <translation type="unfinished"></translation>
+        <translation>Nom :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2862"/>
         <source>Binary:</source>
-        <translation type="unfinished"></translation>
+        <translation>Exécutable :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2880"/>
         <location filename="../radeon_profile.ui" line="2925"/>
         <source>...</source>
-        <translation type="unfinished"></translation>
+        <translation>...</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2893"/>
         <source>Binary parameters:</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres de l&apos;exécutable :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2907"/>
-        <source>Log file: (leave empty if don&apos;t want it)</source>
+        <source>Log file: (leave empty if you don&apos;t want it)</source>
         <translation type="unfinished"></translation>
     </message>
     <message>
@@ -1251,17 +1250,17 @@
     <message>
         <location filename="../radeon_profile.ui" line="2949"/>
         <source>Variables:</source>
-        <translation type="unfinished"></translation>
+        <translation>Variables :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="2973"/>
         <source>Values:</source>
-        <translation type="unfinished"></translation>
+        <translation>Valeurs :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3002"/>
         <source>Summary:</source>
-        <translation type="unfinished"></translation>
+        <translation>Sommaire :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3024"/>
@@ -1281,17 +1280,17 @@
     <message>
         <location filename="../radeon_profile.ui" line="3474"/>
         <source>Cancel</source>
-        <translation type="unfinished"></translation>
+        <translation>Annuler</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3481"/>
         <source>OK</source>
-        <translation type="unfinished"></translation>
+        <translation>OK</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3525"/>
         <source>Configuration</source>
-        <translation type="unfinished"></translation>
+        <translation>Configuration</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3606"/>
@@ -1321,22 +1320,22 @@
     <message>
         <location filename="../radeon_profile.ui" line="3653"/>
         <source>User interface</source>
-        <translation type="unfinished"></translation>
+        <translation>Interface utilisateur</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3689"/>
         <source>Configure top bar</source>
-        <translation type="unfinished"></translation>
+        <translation>Configurer la barre supérieure</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3702"/>
         <source>Refresh</source>
-        <translation type="unfinished"></translation>
+        <translation>Paramètres de rafraîchissement</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3739"/>
         <source>Power levels statistics</source>
-        <translation type="unfinished"></translation>
+        <translation>Statistiques des niveaux de puissance</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3783"/>
@@ -1346,7 +1345,7 @@
     <message>
         <location filename="../radeon_profile.ui" line="3796"/>
         <source>Refresh interval [s]</source>
-        <translation type="unfinished"></translation>
+        <translation>Intervalle de rafraîchissement</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3827"/>
@@ -1366,7 +1365,7 @@
     <message>
         <location filename="../radeon_profile.ui" line="3851"/>
         <source>Fan</source>
-        <translation type="unfinished"></translation>
+        <translation>Ventilation</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3872"/>
@@ -1386,7 +1385,7 @@
     <message>
         <location filename="../radeon_profile.ui" line="3922"/>
         <source>?</source>
-        <translation type="unfinished"></translation>
+        <translation>?</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="3941"/>
@@ -1447,12 +1446,12 @@
     <message>
         <location filename="../radeon_profile.ui" line="4080"/>
         <source>Save all</source>
-        <translation type="unfinished"></translation>
+        <translation>Enregistrer tout</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="4128"/>
         <source>About</source>
-        <translation type="unfinished"></translation>
+        <translation>À propos</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="4207"/>
@@ -1467,17 +1466,17 @@
     <message>
         <location filename="../radeon_profile.ui" line="4269"/>
         <source>Contributors:</source>
-        <translation type="unfinished"></translation>
+        <translation>Contributeurs :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="4284"/>
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/marazmista/radeon-profile/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;Github contributors&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;&lt;a href=&quot;https://github.com/marazmista/radeon-profile/graphs/contributors&quot;&gt;&lt;span style=&quot; text-decoration: underline; color:#2980b9;&quot;&gt;Contributeurs Github&lt;/span&gt;&lt;/a&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="4325"/>
         <source>External resources:</source>
-        <translation type="unfinished"></translation>
+        <translation>Ressources externes :</translation>
     </message>
     <message>
         <location filename="../radeon_profile.ui" line="4340"/>
@@ -1497,7 +1496,7 @@
         <location filename="../tab_exec.cpp" line="253"/>
         <location filename="../tab_fanControl.cpp" line="217"/>
         <source>Error</source>
-        <translation type="unfinished"></translation>
+        <translation>Erreur</translation>
     </message>
     <message>
         <location filename="../radeon_profile.cpp" line="77"/>
@@ -1512,7 +1511,7 @@
     <message>
         <location filename="../radeon_profile.cpp" line="573"/>
         <source>Current profile: </source>
-        <translation type="unfinished"></translation>
+        <translation>Profil actif : </translation>
     </message>
     <message>
         <location filename="../tab_events.cpp" line="156"/>
@@ -1568,18 +1567,18 @@ When active event condition is no longer true, event is revoked and power profil
         <location filename="../tab_plots.cpp" line="61"/>
         <location filename="../uiEvents.cpp" line="273"/>
         <source>Question</source>
-        <translation type="unfinished"></translation>
+        <translation>Question</translation>
     </message>
     <message>
         <location filename="../tab_exec.cpp" line="147"/>
         <location filename="../tab_exec.cpp" line="208"/>
         <source>Remove this item?</source>
-        <translation type="unfinished"></translation>
+        <translation>Supprimer l&apos;élément?</translation>
     </message>
     <message>
         <location filename="../tab_exec.cpp" line="216"/>
         <source>Select binary</source>
-        <translation type="unfinished"></translation>
+        <translation type="unfinished">Sélectionner l&apos;exécutable</translation>
     </message>
     <message>
         <location filename="../tab_exec.cpp" line="224"/>
@@ -1715,7 +1714,7 @@ Closing application will restore fan control to Auto. If application crashes, la
         <location filename="../uiElements.cpp" line="32"/>
         <location filename="../uiEvents.cpp" line="118"/>
         <source>Quit</source>
-        <translation type="unfinished"></translation>
+        <translation>Quitter</translation>
     </message>
     <message>
         <location filename="../uiElements.cpp" line="36"/>
@@ -1730,7 +1729,7 @@ Closing application will restore fan control to Auto. If application crashes, la
     <message>
         <location filename="../uiElements.cpp" line="62"/>
         <source>Reset min and max temperatures</source>
-        <translation type="unfinished"></translation>
+        <translation>Réinitialiser les températures minimum et maximum</translation>
     </message>
     <message>
         <location filename="../uiElements.cpp" line="74"/>
@@ -1766,9 +1765,9 @@ Closing application will restore fan control to Auto. If application crashes, la
     <message numerus="yes">
         <location filename="../uiElements.cpp" line="150"/>
         <source>version %n</source>
-        <translation type="unfinished">
-            <numerusform></numerusform>
-            <numerusform></numerusform>
+        <translation>
+            <numerusform>version %n</numerusform>
+            <numerusform>versions %n</numerusform>
         </translation>
     </message>
     <message>
@@ -1779,12 +1778,12 @@ Closing application will restore fan control to Auto. If application crashes, la
     <message>
         <location filename="../uiElements.cpp" line="293"/>
         <source>Temperature [°C]</source>
-        <translation type="unfinished"></translation>
+        <translation>Température [°C]</translation>
     </message>
     <message>
         <location filename="../uiElements.cpp" line="316"/>
         <source>Frequency [MHz]</source>
-        <translation type="unfinished"></translation>
+        <translation>Fréquence [MHz]</translation>
     </message>
     <message>
         <location filename="../uiElements.cpp" line="317"/>
@@ -1824,7 +1823,7 @@ Closing application will restore fan control to Auto. If application crashes, la
     <message>
         <location filename="../uiEvents.cpp" line="214"/>
         <source>Profile selection</source>
-        <translation type="unfinished"></translation>
+        <translation>Sélection du profil</translation>
     </message>
     <message>
         <location filename="../uiEvents.cpp" line="233"/>
@@ -1834,7 +1833,7 @@ Closing application will restore fan control to Auto. If application crashes, la
     <message>
         <location filename="../uiEvents.cpp" line="273"/>
         <source>Kernel: </source>
-        <translation type="unfinished"></translation>
+        <translation>Noyau : </translation>
     </message>
     <message>
         <location filename="../uiEvents.cpp" line="273"/>
