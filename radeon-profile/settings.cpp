@@ -14,49 +14,49 @@
 
 void radeon_profile::saveConfig() {
     {
-        // If settingsFilePath doesn't exist yet, running QSetting's destructor will create it.
+        // If settingsFilePath doesn't exist yet, running QSetting's constructor will create it.
         // It's important that happens before saving auxstuff later-on.
-        QSettings settings(settingsFilePath,QSettings::IniFormat);
+        QSettings *settings = getUserSettings();
 
-        settings.setValue("startMinimized",ui->cb_startMinimized->isChecked());
-        settings.setValue("minimizeToTray",ui->cb_minimizeTray->isChecked());
-        settings.setValue("closeToTray",ui->cb_closeTray->isChecked());
-        settings.setValue("updateInterval",ui->spin_timerInterval->value());
-        settings.setValue("updateGraphs",ui->cb_graphs->isChecked());
-        settings.setValue("saveWindowGeometry",ui->cb_saveWindowGeometry->isChecked());
-        settings.setValue("windowGeometry",this->geometry());
-        settings.setValue("powerLevelStatistics", ui->cb_stats->isChecked());
-        settings.setValue("alternateRowColors",ui->cb_alternateRow->isChecked());
-        settings.setValue("language", ui->combo_languageMenu->currentData());
+        settings->setValue("startMinimized",ui->cb_startMinimized->isChecked());
+        settings->setValue("minimizeToTray",ui->cb_minimizeTray->isChecked());
+        settings->setValue("closeToTray",ui->cb_closeTray->isChecked());
+        settings->setValue("updateInterval",ui->spin_timerInterval->value());
+        settings->setValue("updateGraphs",ui->cb_graphs->isChecked());
+        settings->setValue("saveWindowGeometry",ui->cb_saveWindowGeometry->isChecked());
+        settings->setValue("windowGeometry",this->geometry());
+        settings->setValue("powerLevelStatistics", ui->cb_stats->isChecked());
+        settings->setValue("alternateRowColors",ui->cb_alternateRow->isChecked());
+        settings->setValue("language", ui->combo_languageMenu->currentData());
 
-        settings.setValue("graphOffset", ui->cb_plotsRightGap->isChecked());
-        settings.setValue("graphRange",ui->slider_timeRange->value());
-        settings.setValue("showLegend",ui->cb_showLegends->isChecked());
-        settings.setValue("plotsBackgroundColor", ui->frame_plotsBackground->palette().background().color().name());
-        settings.setValue("setCommonPlotsBg", ui->cb_overridePlotsBg->isChecked());
-        settings.setValue("daemonAutoRefresh",ui->cb_daemonAutoRefresh->isChecked());
-        settings.setValue("fanSpeedSlider",ui->slider_fanSpeed->value());
-        settings.setValue("saveSelectedFanMode",ui->cb_saveFanMode->isChecked());
-        settings.setValue("fanMode",ui->stack_fanModes->currentIndex());
-        settings.setValue("fanProfileName",ui->l_currentFanProfile->text());
+        settings->setValue("graphOffset", ui->cb_plotsRightGap->isChecked());
+        settings->setValue("graphRange",ui->slider_timeRange->value());
+        settings->setValue("showLegend",ui->cb_showLegends->isChecked());
+        settings->setValue("plotsBackgroundColor", ui->frame_plotsBackground->palette().window().color().name());
+        settings->setValue("setCommonPlotsBg", ui->cb_overridePlotsBg->isChecked());
+        settings->setValue("daemonAutoRefresh",ui->cb_daemonAutoRefresh->isChecked());
+        settings->setValue("fanSpeedSlider",ui->slider_fanSpeed->value());
+        settings->setValue("saveSelectedFanMode",ui->cb_saveFanMode->isChecked());
+        settings->setValue("fanMode",ui->stack_fanModes->currentIndex());
+        settings->setValue("fanProfileName",ui->l_currentFanProfile->text());
 
-        settings.setValue("restorePercentOverclock", ui->cb_restorePercentOc->isChecked());
-        settings.setValue("overclockValue", ui->slider_ocSclk->value());
-        settings.setValue("overclockMemValue", ui->slider_ocMclk->value());
-        settings.setValue("restoreFrequencyStates", ui->cb_restoreFrequencyStates->isChecked());
-        settings.setValue("enabledFrequencyStates", enabledFrequencyStatesCore);
-        settings.setValue("enabledFrequencyStatesMem", enabledFrequencyStatesMem);
+        settings->setValue("restorePercentOverclock", ui->cb_restorePercentOc->isChecked());
+        settings->setValue("overclockValue", ui->slider_ocSclk->value());
+        settings->setValue("overclockMemValue", ui->slider_ocMclk->value());
+        settings->setValue("restoreFrequencyStates", ui->cb_restoreFrequencyStates->isChecked());
+        settings->setValue("enabledFrequencyStates", enabledFrequencyStatesCore);
+        settings->setValue("enabledFrequencyStatesMem", enabledFrequencyStatesMem);
 
-        settings.setValue("ocProfileName", ui->l_currentOcProfile->text());
-        settings.setValue("restoreOcProfile", ui->cb_restoreOcProfile->isChecked());
+        settings->setValue("ocProfileName", ui->l_currentOcProfile->text());
+        settings->setValue("restoreOcProfile", ui->cb_restoreOcProfile->isChecked());
 
-        settings.setValue("execDbcAction",ui->combo_execDbcAction->currentIndex());
-        settings.setValue("appendSysEnv",ui->cb_execSysEnv->isChecked());
-        settings.setValue("eventsTracking", ui->cb_eventsTracking->isChecked());
-        settings.setValue("daemonData", ui->cb_daemonData->isChecked());
-        settings.setValue("temperatureHysteresis", ui->spin_hysteresis->value());
-        settings.setValue("connConfirmMethod", ui->combo_connConfirmMethod->currentIndex());
-        settings.setValue("refreshWhenHidden", refreshWhenHidden->isChecked());
+        settings->setValue("execDbcAction",ui->combo_execDbcAction->currentIndex());
+        settings->setValue("appendSysEnv",ui->cb_execSysEnv->isChecked());
+        settings->setValue("eventsTracking", ui->cb_eventsTracking->isChecked());
+        settings->setValue("daemonData", ui->cb_daemonData->isChecked());
+        settings->setValue("temperatureHysteresis", ui->spin_hysteresis->value());
+        settings->setValue("connConfirmMethod", ui->combo_connConfirmMethod->currentIndex());
+        settings->setValue("refreshWhenHidden", refreshWhenHidden->isChecked());
     }
 
     QString xmlString;
@@ -245,55 +245,55 @@ void radeon_profile::saveTopbarItemsSchemas(QXmlStreamWriter &xml) {
 void radeon_profile::loadConfig() {
     qDebug() << "Loading configuration";
 
-    QSettings settings(getLoadedConfigFilePath(), QSettings::IniFormat);
+    QSettings *settings = getUserSettings();
 
-    ui->cb_startMinimized->setChecked(settings.value("startMinimized",false).toBool());
-    ui->cb_minimizeTray->setChecked(settings.value("minimizeToTray",false).toBool());
-    ui->cb_closeTray->setChecked(settings.value("closeToTray",false).toBool());
-    ui->spin_timerInterval->setValue(settings.value("updateInterval",1).toDouble());
-    ui->cb_graphs->setChecked(settings.value("updateGraphs",true).toBool());
-    ui->cb_saveWindowGeometry->setChecked(settings.value("saveWindowGeometry").toBool());
-    ui->cb_stats->setChecked(settings.value("powerLevelStatistics",true).toBool());
-    ui->cb_alternateRow->setChecked(settings.value("alternateRowColors",true).toBool());
-    ui->combo_languageMenu->setCurrentIndex(settings.value("language", "").toInt());
-    ui->cb_daemonAutoRefresh->setChecked(settings.value("daemonAutoRefresh",true).toBool());
-    ui->combo_execDbcAction->setCurrentIndex(settings.value("execDbcAction",0).toInt());
-    ui->slider_fanSpeed->setValue(settings.value("fanSpeedSlider",20).toInt());
-    ui->cb_saveFanMode->setChecked(settings.value("saveSelectedFanMode",false).toBool());
-    ui->l_currentFanProfile->setText(settings.value("fanProfileName","default").toString());
+    ui->cb_startMinimized->setChecked(settings->value("startMinimized",false).toBool());
+    ui->cb_minimizeTray->setChecked(settings->value("minimizeToTray",false).toBool());
+    ui->cb_closeTray->setChecked(settings->value("closeToTray",false).toBool());
+    ui->spin_timerInterval->setValue(settings->value("updateInterval",1).toDouble());
+    ui->cb_graphs->setChecked(settings->value("updateGraphs",true).toBool());
+    ui->cb_saveWindowGeometry->setChecked(settings->value("saveWindowGeometry").toBool());
+    ui->cb_stats->setChecked(settings->value("powerLevelStatistics",true).toBool());
+    ui->cb_alternateRow->setChecked(settings->value("alternateRowColors",true).toBool());
+    ui->combo_languageMenu->setCurrentIndex(settings->value("language", "").toInt());
+    ui->cb_daemonAutoRefresh->setChecked(settings->value("daemonAutoRefresh",true).toBool());
+    ui->combo_execDbcAction->setCurrentIndex(settings->value("execDbcAction",0).toInt());
+    ui->slider_fanSpeed->setValue(settings->value("fanSpeedSlider",20).toInt());
+    ui->cb_saveFanMode->setChecked(settings->value("saveSelectedFanMode",false).toBool());
+    ui->l_currentFanProfile->setText(settings->value("fanProfileName","default").toString());
     if (ui->cb_saveFanMode->isChecked())
-        ui->stack_fanModes->setCurrentIndex(settings.value("fanMode",0).toInt());
+        ui->stack_fanModes->setCurrentIndex(settings->value("fanMode",0).toInt());
 
-    ui->cb_plotsRightGap->setChecked(settings.value("graphOffset",true).toBool());
-    ui->slider_timeRange->setValue(settings.value("graphRange",600).toInt());
-    ui->cb_showLegends->setChecked(settings.value("showLegend",false).toBool());
-    ui->cb_execSysEnv->setChecked(settings.value("appendSysEnv",true).toBool());
-    ui->cb_eventsTracking->setChecked(settings.value("eventsTracking", false).toBool());
+    ui->cb_plotsRightGap->setChecked(settings->value("graphOffset",true).toBool());
+    ui->slider_timeRange->setValue(settings->value("graphRange",600).toInt());
+    ui->cb_showLegends->setChecked(settings->value("showLegend",false).toBool());
+    ui->cb_execSysEnv->setChecked(settings->value("appendSysEnv",true).toBool());
+    ui->cb_eventsTracking->setChecked(settings->value("eventsTracking", false).toBool());
 
-    ui->cb_restorePercentOc->setChecked(settings.value("restorePercentOverclock", false).toBool());
+    ui->cb_restorePercentOc->setChecked(settings->value("restorePercentOverclock", false).toBool());
     ui->group_oc->setChecked(ui->cb_restorePercentOc->isChecked());
-    ui->cb_restoreFrequencyStates->setChecked(settings.value("restoreFrequencyStates", false).toBool());
-    enabledFrequencyStatesCore = settings.value("enabledFrequencyStates", "0 1 2 3 4 5 6 7").toString();
-    enabledFrequencyStatesMem = settings.value("enabledFrequencyStatesMem", "0 1 2 3").toString();
+    ui->cb_restoreFrequencyStates->setChecked(settings->value("restoreFrequencyStates", false).toBool());
+    enabledFrequencyStatesCore = settings->value("enabledFrequencyStates", "0 1 2 3 4 5 6 7").toString();
+    enabledFrequencyStatesMem = settings->value("enabledFrequencyStatesMem", "0 1 2 3").toString();
     ui->group_freq->setChecked(ui->cb_restoreFrequencyStates->isChecked());
-    ui->slider_ocSclk->setValue(settings.value("overclockValue",0).toInt());
-    ui->slider_ocMclk->setValue(settings.value("overclockMemValue",0).toInt());
-    ui->cb_daemonData->setChecked(settings.value("daemonData", false).toBool());
-    ui->combo_connConfirmMethod->setCurrentIndex(settings.value("connConfirmMethod", 1).toInt());
-    ui->spin_hysteresis->setValue(settings.value("temperatureHysteresis", 0).toInt());
+    ui->slider_ocSclk->setValue(settings->value("overclockValue",0).toInt());
+    ui->slider_ocMclk->setValue(settings->value("overclockMemValue",0).toInt());
+    ui->cb_daemonData->setChecked(settings->value("daemonData", false).toBool());
+    ui->combo_connConfirmMethod->setCurrentIndex(settings->value("connConfirmMethod", 1).toInt());
+    ui->spin_hysteresis->setValue(settings->value("temperatureHysteresis", 0).toInt());
 
     ui->frame_plotsBackground->setAutoFillBackground(true);
-    ui->frame_plotsBackground->setPalette(QPalette(QColor(settings.value("plotsBackgroundColor","#808080").toString())));
-    ui->cb_overridePlotsBg->setChecked(settings.value("setCommonPlotsBg", false).toBool());
+    ui->frame_plotsBackground->setPalette(QPalette(QColor(settings->value("plotsBackgroundColor","#808080").toString())));
+    ui->cb_overridePlotsBg->setChecked(settings->value("setCommonPlotsBg", false).toBool());
     ui->btn_setPlotsBackground->setEnabled(ui->cb_overridePlotsBg->isChecked());
     ui->frame_plotsBackground->setVisible(ui->cb_overridePlotsBg->isChecked());
 
     refreshWhenHidden->setCheckable(true);
-    refreshWhenHidden->setChecked(settings.value("refreshWhenHidden", true).toBool());
+    refreshWhenHidden->setChecked(settings->value("refreshWhenHidden", true).toBool());
 
-    ui->cb_restoreOcProfile->setChecked(settings.value("restoreOcProfile", false).toBool());
+    ui->cb_restoreOcProfile->setChecked(settings->value("restoreOcProfile", false).toBool());
     if (ui->cb_restoreOcProfile->isChecked())
-        ui->l_currentOcProfile->setText(settings.value("ocProfileName", "default").toString());
+        ui->l_currentOcProfile->setText(settings->value("ocProfileName", "default").toString());
 
     if (!ui->cb_daemonData->isChecked())
         ui->cb_daemonAutoRefresh->setEnabled(false);
@@ -302,7 +302,7 @@ void radeon_profile::loadConfig() {
 
     // apply some settings to ui on start //
     if (ui->cb_saveWindowGeometry->isChecked())
-        this->setGeometry(settings.value("windowGeometry").toRect());
+        this->setGeometry(settings->value("windowGeometry").toRect());
     else {
         // Set up the size at 1/2 of the screen size, centered
         const QRect desktopSize = QDesktopWidget().availableGeometry(this);
@@ -424,13 +424,13 @@ void radeon_profile::resetLanguage()
 
 QString radeon_profile::getLanguage() const
 {
-    QSettings settings(getLoadedConfigFilePath(), QSettings::IniFormat);
-    return settings.value(QLatin1String("language")).toString();
+    QSettings *settings = getUserSettings();
+    return settings->value(QLatin1String("language")).toString();
 }
 
 void radeon_profile::setLanguage(const QString &locale)
 {
-    QSettings settings(settingsFilePath, QSettings::IniFormat);
+    QSettings *settings = getUserSettings();
 /*
     if (settings->value(QLatin1String("language")).toString() != locale) {
         RestartDialog dialog(ICore::dialogParent(),
@@ -439,9 +439,9 @@ void radeon_profile::setLanguage(const QString &locale)
     }
  */
     if (locale.isEmpty())
-        settings.remove(QLatin1String("language"));
+        settings->remove(QLatin1String("language"));
     else
-        settings.setValue(QLatin1String("language"), locale);
+        settings->setValue(QLatin1String("language"), locale);
 }
 
 
